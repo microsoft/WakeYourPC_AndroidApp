@@ -28,16 +28,16 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        MachinesTabFragment tab;
         switch (position) {
             case 0:
-                MachinesTabFragment tab1 = MachinesTabFragment.newInstance(TabType.MachinesTab);
-                return tab1;
+                tab = MachinesTabFragment.newInstance(TabType.MachinesTab);
             case 1:
-                MachinesTabFragment tab2 = MachinesTabFragment.newInstance(TabType.RequestsTab);
-                return tab2;
+                tab = MachinesTabFragment.newInstance(TabType.RequestsTab);
             default:
                 return null;
         }
+        return tab;
     }
 
     @Override
